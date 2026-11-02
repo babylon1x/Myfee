@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyFee - Fees Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f1f5f9;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #1e293b;
+      line-height: 1.5;
+      display: flex;
+      justify-content: center;
+      padding: 24px 12px;
+      min-height: 100vh;
+    }
+
+    .mobile-container {
+      width: 100%;
+      max-width: 390px;
+      background: #ffffff;
+      min-height: 844px;
+      border-radius: 28px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+    }
+
+    /* Header */
+    .app-header {
+      padding: 20px 20px 16px;
+      background: #ffffff;
+      border-bottom: 1px solid #f1f5f9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1e3a8a;
+      letter-spacing: -0.5px;
+    }
+
+    .parent-profile {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .avatar {
+      width: 32px;
+      height: 32px;
+      background-color: #dbeafe;
+      color: #1e40af;
+      font-weight: 600;
+      font-size: 13px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .parent-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    /* Notice Banner */
+    .school-notice {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 12px 16px;
+      margin: 16px 20px 8px;
+      border-radius: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .notice-icon {
+      color: #2563eb;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    .notice-text {
+      font-size: 13px;
+      color: #1e40af;
+      font-weight: 500;
+    }
+
+    /* Tabs */
+    .tabs-wrapper {
+      padding: 12px 20px 4px;
+    }
+
+    .tabs-list {
+      display: flex;
+      background: #f1f5f9;
+      padding: 4px;
+      border-radius: 12px;
+      gap: 4px;
+    }
+
+    .tab-btn {
+      flex: 1;
+      border: none;
+      background: transparent;
+      padding: 8px 10px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 500;
+      color: #64748b;
+      cursor: pointer;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn.active {
+      background: #ffffff;
+      color: #0f172a;
+      font-weight: 600;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Main Content */
+    .content-area {
+      padding: 16px 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* Balance Summary Card */
+    .balance-card {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      color: #ffffff;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.25);
+    }
+
+    .balance-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      opacity: 0.85;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .balance-amount {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .balance-subtext {
+      font-size: 12px;
+      opacity: 0.8;
+      margin-top: 4px;
+    }
+
+    /* Section Styles */
+    .section-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .section-badge {
+      font-size: 11px;
+      font-weight: 600;
+      background: #e2e8f0;
+      color: #475569;
+      padding: 2px 8px;
+      border-radius: 12px;
+    }
+
+    .fees-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* Fee Card */
+    .fee-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+      position: relative;
+    }
+
+    .fee-card.is-paid {
+      background: #f8fafc;
+      border-color: #e2e8f0;
+    }
+
+    .fee-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .fee-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 3px;
+    }
+
+    .fee-desc {
+      font-size: 12.5px;
+      color: #64748b;
+      line-height: 1.4;
+    }
+
+    .fee-amount {
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f172a;
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    .fee-card-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 10px;
+      border-top: 1px dashed #e2e8f0;
+    }
+
+    .due-date {
+      font-size: 12px;
+      color: #dc2626;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .due-date.optional {
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .pay-btn {
+      background: #2563eb;
+      color: #ffffff;
+      border: none;
+      padding: 7px 18px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+      transition: background 0.15s ease;
+    }
+
+    .pay-btn:hover {
+      background: #1d4ed8;
+    }
+
+    .paid-badge {
+      display: inline-flex;
+      align-items: center;
+      background: #dcfce7;
+      color: #15803d;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 20px;
+      border: 1px solid #bbf7d0;
+    }
+
+    .ask-link {
+      font-size: 12px;
+      color: #64748b;
+      text-decoration: none;
+      align-self: flex-start;
+      margin-top: -4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .ask-link:hover {
+      color: #2563eb;
+      text-decoration: underline;
+    }
+
+    .optional-tag {
+      background: #f1f5f9;
+      color: #475569;
+      font-size: 10.5px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="mobile-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="brand-title">MyFee</div>
+      <div class="parent-profile">
+        <div class="avatar">MA</div>
+        <span class="parent-name">Mrs Adébáyọ̀</span>
+      </div>
+    </header>
+
+    <!-- School Notice -->
+    <div class="school-notice">
+      <span class="notice-icon">📢</span>
+      <div class="notice-text">
+        <strong>Notice:</strong> Mid-term break: school closes on 15 Sept.
+      </div>
+    </div>
+
+    <!-- Children Tabs -->
+    <div class="tabs-wrapper">
+      <div class="tabs-list">
+        <button class="tab-btn active">Ọlá Adébáyọ̀ (JSS 2)</button>
+        <button class="tab-btn">Tọ́lá Adébáyọ̀ (Primary 4)</button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="content-area">
+      <!-- Balance Card -->
+      <section class="balance-card">
+        <div class="balance-label">Still Owed</div>
+        <div class="balance-amount">₦970,000</div>
+        <div class="balance-subtext">Due for First Term 2026/2027 session</div>
+      </section>
+
+      <!-- Required Fees -->
+      <section>
+        <div class="section-title">
+          <span>Required Fees</span>
+          <span class="section-badge">3 items</span>
+        </div>
+        <div class="fees-list">
+          <!-- Fee 1 -->
+          <article class="fee-card">
+            <div class="fee-card-top">
+              <div>
+                <h3 class="fee-name">Tuition, First Term</h3>
+                <p class="fee-desc">Core academic curriculum, laboratory supplies, and digital learning portal access.</p>
+              </div>
+              <div class="fee-amount">₦850,000</div>
+            </div>
+            <div class="fee-card-bottom">
+              <span class="due-date">Due 15 Sept</span>
+              <button class="pay-btn" type="button">Pay</button>
+            </div>
+            <a href="#ask" class="ask-link">💬 Ask about this fee</a>
+          </article>
+
+          <!-- Fee 2 -->
+          <article class="fee-card">
+            <div class="fee-card-top">
+              <div>
+                <h3 class="fee-name">Development levy</h3>
+                <p class="fee-desc">Facility maintenance, solar inverter expansion, and campus security upkeep.</p>
+              </div>
+              <div class="fee-amount">₦120,000</div>
+            </div>
+            <div class="fee-card-bottom">
+              <span class="due-date">Due 15 Sept</span>
+              <button class="pay-btn" type="button">Pay</button>
+            </div>
+            <a href="#ask" class="ask-link">💬 Ask about this fee</a>
+          </article>
+
+          <!-- Fee 3 (Paid) -->
+          <article class="fee-card is-paid">
+            <div class="fee-card-top">
+              <div>
+                <h3 class="fee-name">Books and materials</h3>
+                <p class="fee-desc">Official textbook package, student workbooks, and standard stationery set.</p>
+              </div>
+              <div class="fee-amount">₦95,000</div>
+            </div>
+            <div class="fee-card-bottom">
+              <span class="due-date" style="color: #64748b;">Paid on 02 Aug</span>
+              <span class="paid-badge">✓ Paid</span>
+            </div>
+            <a href="#ask" class="ask-link">💬 Ask about this fee</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Optional Fees -->
+      <section>
+        <div class="section-title">
+          <span>Optional Fees</span>
+          <span class="section-badge">1 item</span>
+        </div>
+        <div class="fees-list">
+          <!-- Optional Fee 1 -->
+          <article class="fee-card">
+            <div class="fee-card-top">
+              <div>
+                <span class="optional-tag">Optional</span>
+                <h3 class="fee-name">School bus</h3>
+                <p class="fee-desc">Two-way daily pickup & drop-off for Gwarinpa and Maitama transport routes.</p>
+              </div>
+              <div class="fee-amount">₦180,000</div>
+            </div>
+            <div class="fee-card-bottom">
+              <span class="due-date optional">Due 30 Sept</span>
+              <button class="pay-btn" type="button">Pay</button>
+            </div>
+            <a href="#ask" class="ask-link">💬 Ask about this fee</a>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>

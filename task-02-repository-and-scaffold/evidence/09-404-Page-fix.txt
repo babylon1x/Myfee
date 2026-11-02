@@ -1,0 +1,31 @@
+PS C:\Users\emman\OneDrive\Desktop\Myfee> npm run dev
+
+> myfee@0.1.0 dev
+> next dev
+
+▲ Next.js 16.4.3 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.2.0.2:3000
+✓ Ready in 1325ms
+✓ Running next.config.ts took 106ms
+
+ GET / 404 in 2.6s (next.js: 1622ms, application-code: 991ms)
+ GET / 404 in 2.6s (next.js: 2.2s, application-code: 363ms)
+ GET / 404 in 680ms (next.js: 116ms, application-code: 564ms)
+ GET / 404 in 660ms (next.js: 316ms, application-code: 344ms)
+  Turbopack has seen frequent file updates and is waiting for the filesystem to settle (0.5s elapsed so far; last modified: "\\\\?\\C:\\Users\\emman\\OneDrive\\Desktop\\Myfee\\node_modules\\next\\dist\\esm\\next-devtools\\userspace\\app\\app-dev-overlay-error-boundary.js").
+  Turbopack has seen frequent file updates and is waiting for the filesystem to settle (0.5s elapsed so far; last modified: "\\\\?\\C:\\Users\\emman\\OneDrive\\Desktop\\Myfee\\node_modules\\next\\dist\\esm\\server\\route-modules\\app-page\\module.js").
+  Turbopack has seen frequent file updates and is waiting for the filesystem to settle (0.5s elapsed so far; last modified: "\\\\?\\C:\\Users\\emman\\OneDrive\\Desktop\\Myfee\\node_modules\\next\\dist\\esm\\shared\\lib\\errors\\missing-default-parallel-route-error.js").
+  Turbopack has seen frequent file updates and is waiting for the filesystem to settle (0.5s elapsed so far; last modified: "\\\\?\\C:\\Users\\emman\\OneDrive\\Desktop\\Myfee\\node_modules\\next\\dist\\esm\\shared\\lib\\utils\\warn-once.js.map").
+ GET / 404 in 216ms (next.js: 59ms, application-code: 157ms)
+ GET / 404 in 212ms (next.js: 57ms, application-code: 155ms)
+  Turbopack has seen frequent file updates and is waiting for the filesystem to settle (0.5s elapsed so far; last modified: "\\\\?\\C:\\Users\\emman\\OneDrive\\Desktop\\Myfee\\node_modules\\next\\dist\\shared\\lib\\router\\utils\\resolve-rewrites.js.map").
+  Turbopack has seen frequent file updates and is waiting for the filesystem to settle (0.5s elapsed so far; last modified: "\\\\?\\C:\\Users\\emman\\OneDrive\\Desktop\\Myfee\\node_modules\\next\\dist\\shared\\lib\\router\\utils\\parse-relative-url.d.ts").
+  Turbopack has seen frequent file updates and is waiting for the filesystem to settle (0.5s elapsed so far; last modified: "\\\\?\\C:\\Users\\emman\\OneDrive\\Desktop\\Myfee\\node_modules\\next\\dist\\shared\\lib\\router\\utils\\get-dynamic-param.d.ts").
+  Turbopack has seen frequent file updates and is waiting for the filesystem to settle (0.5s elapsed so far; last modified: "\\\\?\\C:\\Users\\emman\\OneDrive\\Desktop\\Myfee\\node_modules\\next\\dist\\shared\\lib\\router\\utils\\app-paths.js.map").
+ GET / 200 in 348ms (next.js: 77ms, application-code: 271ms)
+ GET / 404 in 135ms (next.js: 71ms, application-code: 65ms)
+ GET / 404 in 193ms (next.js: 47ms, application-code: 145ms)
+ GET / 200 in 65ms (next.js: 7ms, application-code: 58ms)
+
+Fix: Page2.tsx was renamed back to page.tsx.

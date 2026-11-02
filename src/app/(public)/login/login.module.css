@@ -1,0 +1,44 @@
+.passwordWrap {
+  position: relative;
+}
+
+.passwordWrap .passwordInput {
+  padding-inline-end: var(--size-tap-target);
+}
+
+/* Edge adds its own eye to password fields. Without this there would be two. */
+.passwordInput::-ms-reveal {
+  display: none;
+}
+
+.passwordToggle {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-tap-target);
+  height: var(--size-tap-target);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--color-on-surface-variant);
+  cursor: pointer;
+}
+
+.icon {
+  width: var(--size-icon);
+  height: var(--size-icon);
+}
+
+.forgot {
+  text-align: center;
+}
+
+.forgotLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--size-tap-target);
+}

@@ -1,0 +1,92 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  max-width: var(--content-width-narrow);
+  margin-inline: auto;
+  padding: var(--space-8) var(--space-4) var(--space-16);
+}
+
+/* Two equal columns when both fit. On narrow screens the panel drops under the content. */
+.split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--split-column-min)), 1fr));
+  min-height: var(--size-full-height);
+}
+
+.splitSide {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-8) var(--space-4);
+}
+
+.splitColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  width: 100%;
+  max-width: var(--content-width-form);
+}
+
+.splitContent {
+  margin-block: auto;
+}
+
+.panel {
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-8);
+  background-color: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+}
+
+.brand {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.supporting {
+  color: var(--color-on-surface-variant);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.button {
+  display: inline-flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--size-tap-target);
+  padding-inline: var(--space-6);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.primary {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.secondary {
+  background-color: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+}
+
+.link {
+  color: var(--color-primary);
+}

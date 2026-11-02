@@ -1,0 +1,60 @@
+PS C:\Users\emman\OneDrive\Desktop\Myfee> npm run dev
+
+> myfee@0.1.0 dev
+> next dev
+
+⚠ Port 3000 is in use by process 13248, using available port 3001 instead.
+▲ Next.js 16.4.3 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://10.2.0.2:3001
+✓ Ready in 2.0s
+✓ Running next.config.ts took 101ms
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          13248
+- Dir:          C:\Users\emman\OneDrive\Desktop\Myfee
+- Log:          .next\dev\logs\next-development.log
+
+You can access the existing server at http://localhost:3000,
+or run taskkill /PID 13248 /F to stop it and start a new one.
+
+PS C:\Users\emman\OneDrive\Desktop\Myfee> netstat -ano | findstr :3000
+  TCP    0.0.0.0:3000           0.0.0.0:0              LISTENING       13248
+  TCP    10.2.0.2:3000          10.2.0.2:49672         TIME_WAIT       0
+  TCP    10.2.0.2:3000          10.2.0.2:50335         TIME_WAIT       0
+  TCP    10.2.0.2:3000          10.2.0.2:50416         TIME_WAIT       0
+  TCP    10.2.0.2:3000          10.2.0.2:51491         TIME_WAIT       0
+  TCP    10.2.0.2:3000          10.2.0.2:51954         FIN_WAIT_2      13248
+  TCP    10.2.0.2:3000          10.2.0.2:52208         TIME_WAIT       0
+  TCP    10.2.0.2:3000          10.2.0.2:52969         TIME_WAIT       0
+  TCP    10.2.0.2:3000          10.2.0.2:54142         TIME_WAIT       0
+  TCP    10.2.0.2:3000          10.2.0.2:54938         TIME_WAIT       0
+  TCP    10.2.0.2:3000          10.2.0.2:56708         TIME_WAIT       0
+  TCP    10.2.0.2:3000          10.2.0.2:58025         TIME_WAIT       0
+  TCP    10.2.0.2:3000          10.2.0.2:59198         TIME_WAIT       0
+  TCP    10.2.0.2:3000          10.2.0.2:59302         TIME_WAIT       0
+  TCP    10.2.0.2:3000          10.2.0.2:59657         TIME_WAIT       0
+  TCP    10.2.0.2:3000          10.2.0.2:60571         TIME_WAIT       0
+  TCP    10.2.0.2:3000          10.2.0.2:61217         TIME_WAIT       0
+  TCP    10.2.0.2:3000          10.2.0.2:62746         TIME_WAIT       0
+  TCP    10.2.0.2:3000          10.2.0.2:63032         TIME_WAIT       0
+  TCP    10.2.0.2:3000          10.2.0.2:64061         TIME_WAIT       0
+  TCP    10.2.0.2:3000          10.2.0.2:64087         TIME_WAIT       0
+  TCP    10.2.0.2:3000          10.2.0.2:64191         TIME_WAIT       0
+  TCP    10.2.0.2:3000          10.2.0.2:64723         TIME_WAIT       0
+  TCP    10.2.0.2:3000          10.2.0.2:64832         TIME_WAIT       0
+  TCP    10.2.0.2:3000          10.2.0.2:65224         FIN_WAIT_2      13248
+  TCP    10.2.0.2:50416         10.2.0.2:3000          TIME_WAIT       0
+  TCP    10.2.0.2:51954         10.2.0.2:3000          CLOSE_WAIT      8596
+  TCP    10.2.0.2:54938         10.2.0.2:3000          TIME_WAIT       0
+  TCP    10.2.0.2:55800         10.2.0.2:3000          TIME_WAIT       0
+  TCP    10.2.0.2:56708         10.2.0.2:3000          TIME_WAIT       0
+  TCP    10.2.0.2:59198         10.2.0.2:3000          TIME_WAIT       0
+  TCP    10.2.0.2:59302         10.2.0.2:3000          TIME_WAIT       0
+  TCP    10.2.0.2:62964         10.2.0.2:3000          TIME_WAIT       0
+  TCP    10.2.0.2:63032         10.2.0.2:3000          TIME_WAIT       0
+  TCP    10.2.0.2:64191         10.2.0.2:3000          TIME_WAIT       0
+  TCP    10.2.0.2:65224         10.2.0.2:3000          CLOSE_WAIT      8596
+  TCP    [::]:3000              [::]:0                 LISTENING       13248
+PS C:\Users\emman\OneDrive\Desktop\Myfee> 

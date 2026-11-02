@@ -1,0 +1,33 @@
+Question:
+Which typography style did you use for the ₦970,000 "Still owed" amount, and which colour role?
+
+Agent's answer (verbatim):
+For the **₦970,000 "Still owed"** amount in [fees-with-system.html](file:///c:/Users/emman/OneDrive/Desktop/Myfee/task-01-design-system/screens/fees-with-system.html#L366):
+
+* **Typography Style:** [`.type-headline-large`](file:///c:/Users/emman/OneDrive/Desktop/Myfee/task-01-design-system/styles/tokens.css#L456-L463)
+  * **Font family:** `'Charis SIL', serif`
+  * **Size:** `32px`
+  * **Weight:** `400`
+  * **Line height:** `1.2`
+  * **Letter spacing:** `-0.02em`
+  *(Chosen because Charis SIL renders the Nigerian Naira `₦` symbol cleanly with large, even digits)*
+
+* **Colour Role:** [`--color-on-primary-container`](file:///c:/Users/emman/OneDrive/Desktop/Myfee/task-01-design-system/styles/tokens.css#L161)
+  * Rendered on top of the card's background [`--color-primary-container`](file:///c:/Users/emman/OneDrive/Desktop/Myfee/task-01-design-system/styles/tokens.css#L160)
+  * **Light mode:** resolves to `var(--primitive-primary-30)` (`#2F009A`), providing a high contrast ratio of **9.63:1** (exceeding WCAG AAA).
+
+Checked against the code (fees-with-system.html):
+.balance-amount {
+    color: var(--color-on-primary-container);
+}
+.type-headline-large {
+    font-family: var(--typography-headline-large-font-family);
+    font-weight: var(--typography-headline-large-font-weight);
+    font-style: var(--typography-headline-large-font-style);
+    font-size: var(--typography-headline-large-font-size);
+    line-height: var(--typography-headline-large-line-height);
+    letter-spacing: var(--typography-headline-large-letter-spacing);
+}
+
+Result:
+The element used the token type-headline-large and the colour role color-on-primary-container, as the agent said.

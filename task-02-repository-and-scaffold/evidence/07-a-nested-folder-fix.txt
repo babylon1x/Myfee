@@ -1,0 +1,13 @@
+After fixing and scaffolding in the adequate folder
+
+
+> myfee@0.1.0 dev
+> next dev
+
+▲ Next.js 16.4.3 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.2.0.2:3000
+✓ Ready in 1907ms
+✓ Running next.config.ts took 142ms
+
+ GET / 200 in 1092ms (next.js: 518ms, application-code: 573ms)

@@ -1,0 +1,7 @@
+PS C:\Users\emman\OneDrive\Desktop\Myfee> npx prisma studio
+Loaded Prisma config from prisma.config.ts.
+
+
+Prisma Studio is running at: http://localhost:51212
+
+Fix: I learnt that passwords shouldn't be wrotten in between the brackets and special characters are not recognized by the url and should be encoded, e.g $= %24

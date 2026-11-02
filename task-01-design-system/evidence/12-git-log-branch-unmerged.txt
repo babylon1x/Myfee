@@ -1,0 +1,32 @@
+$ git log --oneline --graph --all
+* 7a886c4 Broken color referencing
+* 7a244f7  Searching entire codebase for raw colour values.
+* ebc7ef3 Writing script and checking if agent consumed design system
+* a639070 Updating defect md file
+* b55aa31 Updating defect for token export.
+* ec4d794 Adding Design tokens JSON evidence.
+* 19d2bf0 Defined shadows system
+* 0858132 Defining and adding Typography system
+* e88ccaa Added business biref file to project folder.
+* 1755198 Updated and cleaned up Color-roles.md file
+* ab29a6e Updated the color roles md document (section 3)
+* a3c6827 Color roles.md file and primary pinning evidence
+$ git branch -d Deliberate-regression
+error: the branch 'Deliberate-regression' is not fully merged
+hint: If you are sure you want to delete it, run 'git branch -D Deliberate-regression'
+hint: Disable this message with "git config set advice.forceDeleteBranch false"
+$ git branch -D Deliberate-regression
+Deleted branch Deliberate-regression (was 7a886c4).
+$ git log --oneline --graph --all
+* 7a244f7  Searching entire codebase for raw colour values.
+* ebc7ef3 Writing script and checking if agent consumed design system
+* a639070 Updating defect md file
+* b55aa31 Updating defect for token export.
+* ec4d794 Adding Design tokens JSON evidence.
+* 19d2bf0 Defined shadows system
+* 0858132 Defining and adding Typography system
+* e88ccaa Added business biref file to project folder.
+* 1755198 Updated and cleaned up Color-roles.md file
+* ab29a6e Updated the color roles md document (section 3)
+* a3c6827 Color roles.md file and primary pinning evidence
+Note: 7a886c4 was the only commit on the Deliberate-regression branch, one commit ahead of main (7a244f7). Git refused the safe delete because it was not merged, and after the forced delete it no longer appears in the history. Main never contained it.

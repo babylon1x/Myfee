@@ -1,0 +1,60 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.input {
+  width: 100%;
+  min-height: var(--size-tap-target);
+  padding-inline: var(--space-4);
+  border: var(--border-width) solid var(--color-outline);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-container-low);
+  color: var(--color-on-surface);
+}
+
+.input[aria-invalid="true"] {
+  border-color: var(--color-error);
+}
+
+.fieldError {
+  min-height: var(--size-text-line);
+  color: var(--color-error);
+}
+
+.alert {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+}
+
+.alert a {
+  color: inherit;
+}
+
+.alertInfo {
+  background-color: var(--color-info-container);
+  color: var(--color-on-info-container);
+}
+
+.alertSuccess {
+  background-color: var(--color-success-container);
+  color: var(--color-on-success-container);
+}
+
+.alertError {
+  background-color: var(--color-error-container);
+  color: var(--color-on-error-container);
+}
+
+.submit {
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+}

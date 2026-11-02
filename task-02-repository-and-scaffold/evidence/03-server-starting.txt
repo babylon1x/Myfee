@@ -1,0 +1,36 @@
+Server staring
+
+> myfee@0.1.0 dev
+> next dev
+
+▲ Next.js 16.4.3 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.2.0.2:3000
+✓ Ready in 1889ms
+✓ Running next.config.ts took 124ms
+
+--
+
+ The first page load, with the HTTP status and the load time:
+
+> myfee@0.1.0 dev
+> next dev
+
+▲ Next.js 16.4.3 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.2.0.2:3000
+✓ Ready in 1889ms
+✓ Running next.config.ts took 124ms
+
+ GET / 200 in 1580ms (next.js: 748ms, application-code: 832ms)
+⚠ Blocked cross-origin request to Next.js dev resource /_next/hmr from "10.2.0.2".
+Cross-origin access to Next.js dev resources is blocked by default for safety.
+
+To allow this host in development, add it to "allowedDevOrigins" in next.config.js and restart the dev server:  
+
+// next.config.js
+module.exports = {
+  allowedDevOrigins: ['10.2.0.2'],
+}
+
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins

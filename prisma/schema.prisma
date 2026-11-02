@@ -1,0 +1,20 @@
+// The PRD's models and the vector extension arrive in Step 1.2 (PRD 8.7).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// A school asking to join MyFee, from /get-for-school. It has no schoolId because
+// the school does not exist yet.
+model SchoolRequest {
+  id         String   @id @default(cuid())
+  schoolName String
+  fullName   String
+  email      String
+  phone      String?
+  createdAt  DateTime @default(now())
+}

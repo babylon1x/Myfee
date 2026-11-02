@@ -1,0 +1,563 @@
+/**
+ * MyFee Design System - Generated CSS Custom Properties
+ * 
+ * AUTO-GENERATED from evidence/tokens-complete.json
+ * Single Source of Truth for all UI Implementation.
+ * 
+ * ARCHITECTURE GUIDELINES:
+ * 1. PRIMITIVE COLORS (--primitive-*):
+ *    These represent raw chromatic and tonal palettes.
+ *    DO NOT use primitive colors directly on UI components.
+ * 
+ * 2. COLOR ROLES (--color-*):
+ *    These are semantic tokens with dedicated Light Mode and Dark Mode mappings.
+ *    ALWAYS use color roles on UI components.
+ * 
+ * 3. THEME SWITCHING:
+ *    Light mode is applied by default on :root or [data-theme="light"].
+ *    Dark mode is triggered by [data-theme="dark"] or prefers-color-scheme: dark.
+ */
+
+/* ==========================================================================
+   1. Foundational Primitive Colors (Do NOT use directly in UI)
+   ========================================================================== */
+:root {
+  /* Key Colors (Source Anchors) */
+  --primitive-key-primary: #3d00c2;
+  --primitive-key-neutral: #79767a;
+  --primitive-key-neutral-variant: #79757f;
+  --primitive-key-success: #00ac14;
+  --primitive-key-error: #d90101;
+  --primitive-key-info: #e3a41c;
+
+  /* Primary Tonal Palette */
+  --primitive-primary-100: #ffffff;
+  --primitive-primary-99: #fffaff;
+  --primitive-primary-98: #fbf6ff;
+  --primitive-primary-95: #f1eaff;
+  --primitive-primary-90: #dfd7ff;
+  --primitive-primary-80: #bcb0ff;
+  --primitive-primary-70: #9b88ff;
+  --primitive-primary-60: #7a5efe;
+  --primitive-primary-50: #5b3ade;
+  --primitive-primary-40: #3d00c2;
+  --primitive-primary-30: #2f009a;
+  --primitive-primary-20: #210074;
+  --primitive-primary-10: #140050;
+  --primitive-primary-0: #000000;
+
+  /* Neutral Variant Tonal Palette */
+  --primitive-neutral-variant-96: #f8f1fd;
+  --primitive-neutral-variant-94: #f2ecf7;
+  --primitive-neutral-variant-92: #ece6f1;
+  --primitive-neutral-variant-87: #ded8e3;
+  --primitive-neutral-variant-24: #3b3841;
+  --primitive-neutral-variant-22: #36333c;
+  --primitive-neutral-variant-17: #2b2931;
+  --primitive-neutral-variant-12: #211e26;
+  --primitive-neutral-variant-6: #14121a;
+  --primitive-neutral-variant-4: #0f0d15;
+  --primitive-neutral-variant-100: #ffffff;
+  --primitive-neutral-variant-99: #fffbff;
+  --primitive-neutral-variant-98: #fdf7ff;
+  --primitive-neutral-variant-95: #f5eefa;
+  --primitive-neutral-variant-90: #e6e0ec;
+  --primitive-neutral-variant-80: #cac4cf;
+  --primitive-neutral-variant-70: #aea9b4;
+  --primitive-neutral-variant-60: #938f99;
+  --primitive-neutral-variant-50: #79757f;
+  --primitive-neutral-variant-40: #605d66;
+  --primitive-neutral-variant-30: #48454e;
+  --primitive-neutral-variant-20: #322f38;
+  --primitive-neutral-variant-10: #1d1a22;
+  --primitive-neutral-variant-0: #000000;
+
+  /* Neutral Tonal Palette */
+  --primitive-neutral-96: #f7f2f7;
+  --primitive-neutral-94: #f1ecf1;
+  --primitive-neutral-92: #ece7eb;
+  --primitive-neutral-87: #ddd9dd;
+  --primitive-neutral-24: #3a383c;
+  --primitive-neutral-22: #363438;
+  --primitive-neutral-17: #2b292d;
+  --primitive-neutral-12: #201f22;
+  --primitive-neutral-6: #141316;
+  --primitive-neutral-4: #0f0e11;
+  --primitive-neutral-100: #ffffff;
+  --primitive-neutral-99: #fffbff;
+  --primitive-neutral-98: #fdf8fc;
+  --primitive-neutral-95: #f4eff4;
+  --primitive-neutral-90: #e6e1e5;
+  --primitive-neutral-80: #c9c5c9;
+  --primitive-neutral-70: #aeaaae;
+  --primitive-neutral-60: #939094;
+  --primitive-neutral-50: #79767a;
+  --primitive-neutral-40: #605d61;
+  --primitive-neutral-30: #48464a;
+  --primitive-neutral-20: #313033;
+  --primitive-neutral-10: #1c1b1e;
+  --primitive-neutral-0: #000000;
+
+  /* Functional Palette: Info */
+  --primitive-info-100: #ffffff;
+  --primitive-info-99: #fffbff;
+  --primitive-info-98: #fff8f3;
+  --primitive-info-95: #ffeed9;
+  --primitive-info-90: #ffdeaa;
+  --primitive-info-80: #fdbb36;
+  --primitive-info-70: #dea016;
+  --primitive-info-60: #be8700;
+  --primitive-info-50: #9d6f00;
+  --primitive-info-40: #7d5700;
+  --primitive-info-30: #5f4100;
+  --primitive-info-20: #422c00;
+  --primitive-info-10: #271900;
+  --primitive-info-0: #000000;
+
+  /* Functional Palette: Error */
+  --primitive-error-100: #ffffff;
+  --primitive-error-99: #fffbff;
+  --primitive-error-98: #fff8f6;
+  --primitive-error-95: #ffedea;
+  --primitive-error-90: #ffdad4;
+  --primitive-error-80: #ffb4a8;
+  --primitive-error-70: #ff8a78;
+  --primitive-error-60: #ff5541;
+  --primitive-error-50: #eb1a0f;
+  --primitive-error-40: #c00000;
+  --primitive-error-30: #930000;
+  --primitive-error-20: #690000;
+  --primitive-error-10: #410000;
+  --primitive-error-0: #000000;
+
+  /* Functional Palette: Success */
+  --primitive-success-100: #ffffff;
+  --primitive-success-99: #f7ffee;
+  --primitive-success-98: #ecffe2;
+  --primitive-success-95: #caffba;
+  --primitive-success-90: #75ff66;
+  --primitive-success-80: #55e24a;
+  --primitive-success-70: #33c530;
+  --primitive-success-60: #00a813;
+  --primitive-success-50: #008b0e;
+  --primitive-success-40: #006e08;
+  --primitive-success-30: #005305;
+  --primitive-success-20: #003a02;
+  --primitive-success-10: #002201;
+  --primitive-success-0: #000000;
+
+}
+
+/* ==========================================================================
+   2. Semantic Color Roles - Light Mode (Default & [data-theme="light"])
+   ========================================================================== */
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  --color-primary: var(--primitive-primary-40);
+  --color-on-primary: var(--primitive-primary-100);
+  --color-primary-container: var(--primitive-primary-90);
+  --color-on-primary-container: var(--primitive-primary-30);
+  --color-error: var(--primitive-error-40);
+  --color-on-error: var(--primitive-error-100);
+  --color-error-container: var(--primitive-error-90);
+  --color-on-error-container: var(--primitive-error-30);
+  --color-success: var(--primitive-success-40);
+  --color-on-success: var(--primitive-success-100);
+  --color-success-container: var(--primitive-success-90);
+  --color-on-success-container: var(--primitive-success-30);
+  --color-info: var(--primitive-info-40);
+  --color-on-info: var(--primitive-info-100);
+  --color-info-container: var(--primitive-info-90);
+  --color-on-info-container: var(--primitive-info-40);
+  --color-surface: var(--primitive-neutral-99);
+  --color-on-surface: var(--primitive-neutral-10);
+  --color-surface-variant: var(--primitive-neutral-95);
+  --color-on-surface-variant: var(--primitive-neutral-variant-20);
+  --color-surface-container-highest: var(--primitive-neutral-90);
+  --color-surface-container-high: var(--primitive-neutral-92);
+  --color-surface-container: var(--primitive-neutral-94);
+  --color-surface-container-low: var(--primitive-neutral-96);
+  --color-surface-container-lowest: var(--primitive-neutral-98);
+  --color-inverse-surface: var(--primitive-neutral-20);
+  --color-inverse-on-surface: var(--primitive-neutral-95);
+  --color-surface-tint: var(--primitive-primary-50);
+  --color-outline: var(--primitive-neutral-variant-80);
+  --color-outline-variant: var(--primitive-neutral-90);
+  --color-primary-fixed: var(--primitive-primary-90);
+  --color-on-primary-fixed: var(--primitive-primary-10);
+  --color-primary-fixed-dim: var(--primitive-primary-80);
+  --color-on-primary-fixed-variant: var(--primitive-primary-30);
+  --color-inverse-primary: var(--primitive-primary-80);
+  --color-scrim: var(--primitive-neutral-10);
+  --color-shadow-soft: var(--primitive-primary-98);
+  --color-shadow-medium: var(--primitive-primary-95);
+  --color-shadow-hard: var(--primitive-primary-90);
+}
+
+/* ==========================================================================
+   3. Semantic Color Roles - Dark Mode ([data-theme="dark"] & prefers-color-scheme)
+   ========================================================================== */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-primary: var(--primitive-primary-70);
+  --color-on-primary: var(--primitive-primary-10);
+  --color-primary-container: var(--primitive-primary-20);
+  --color-on-primary-container: var(--primitive-primary-80);
+  --color-error: var(--primitive-error-70);
+  --color-on-error: var(--primitive-error-10);
+  --color-error-container: var(--primitive-error-20);
+  --color-on-error-container: var(--primitive-error-80);
+  --color-success: var(--primitive-success-70);
+  --color-on-success: var(--primitive-success-10);
+  --color-success-container: var(--primitive-success-20);
+  --color-on-success-container: var(--primitive-success-80);
+  --color-info: var(--primitive-info-70);
+  --color-on-info: var(--primitive-info-10);
+  --color-info-container: var(--primitive-info-20);
+  --color-on-info-container: var(--primitive-info-80);
+  --color-surface: var(--primitive-neutral-6);
+  --color-on-surface: var(--primitive-neutral-95);
+  --color-surface-variant: var(--primitive-neutral-variant-10);
+  --color-on-surface-variant: var(--primitive-neutral-variant-90);
+  --color-surface-container-highest: var(--primitive-neutral-20);
+  --color-surface-container-high: var(--primitive-neutral-17);
+  --color-surface-container: var(--primitive-neutral-12);
+  --color-surface-container-low: var(--primitive-neutral-10);
+  --color-surface-container-lowest: var(--primitive-neutral-0);
+  --color-inverse-surface: var(--primitive-primary-90);
+  --color-inverse-on-surface: var(--primitive-primary-10);
+  --color-surface-tint: var(--primitive-primary-80);
+  --color-outline: var(--primitive-neutral-variant-50);
+  --color-outline-variant: var(--primitive-neutral-variant-20);
+  --color-primary-fixed: var(--primitive-primary-90);
+  --color-on-primary-fixed: var(--primitive-primary-10);
+  --color-primary-fixed-dim: var(--primitive-primary-80);
+  --color-on-primary-fixed-variant: var(--primitive-primary-30);
+  --color-inverse-primary: var(--primitive-primary-80);
+  --color-scrim: var(--primitive-neutral-10);
+  --color-shadow-soft: var(--primitive-neutral-variant-6);
+  --color-shadow-medium: var(--primitive-neutral-variant-4);
+  --color-shadow-hard: var(--primitive-neutral-variant-0);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+  --color-primary: var(--primitive-primary-70);
+  --color-on-primary: var(--primitive-primary-10);
+  --color-primary-container: var(--primitive-primary-20);
+  --color-on-primary-container: var(--primitive-primary-80);
+  --color-error: var(--primitive-error-70);
+  --color-on-error: var(--primitive-error-10);
+  --color-error-container: var(--primitive-error-20);
+  --color-on-error-container: var(--primitive-error-80);
+  --color-success: var(--primitive-success-70);
+  --color-on-success: var(--primitive-success-10);
+  --color-success-container: var(--primitive-success-20);
+  --color-on-success-container: var(--primitive-success-80);
+  --color-info: var(--primitive-info-70);
+  --color-on-info: var(--primitive-info-10);
+  --color-info-container: var(--primitive-info-20);
+  --color-on-info-container: var(--primitive-info-80);
+  --color-surface: var(--primitive-neutral-6);
+  --color-on-surface: var(--primitive-neutral-95);
+  --color-surface-variant: var(--primitive-neutral-variant-10);
+  --color-on-surface-variant: var(--primitive-neutral-variant-90);
+  --color-surface-container-highest: var(--primitive-neutral-20);
+  --color-surface-container-high: var(--primitive-neutral-17);
+  --color-surface-container: var(--primitive-neutral-12);
+  --color-surface-container-low: var(--primitive-neutral-10);
+  --color-surface-container-lowest: var(--primitive-neutral-0);
+  --color-inverse-surface: var(--primitive-primary-90);
+  --color-inverse-on-surface: var(--primitive-primary-10);
+  --color-surface-tint: var(--primitive-primary-80);
+  --color-outline: var(--primitive-neutral-variant-50);
+  --color-outline-variant: var(--primitive-neutral-variant-20);
+  --color-primary-fixed: var(--primitive-primary-90);
+  --color-on-primary-fixed: var(--primitive-primary-10);
+  --color-primary-fixed-dim: var(--primitive-primary-80);
+  --color-on-primary-fixed-variant: var(--primitive-primary-30);
+  --color-inverse-primary: var(--primitive-primary-80);
+  --color-scrim: var(--primitive-neutral-10);
+  --color-shadow-soft: var(--primitive-neutral-variant-6);
+  --color-shadow-medium: var(--primitive-neutral-variant-4);
+  --color-shadow-hard: var(--primitive-neutral-variant-0);
+  }
+}
+
+/* ==========================================================================
+   4. Effect Styles (Box Shadows)
+   ========================================================================== */
+:root {
+  /* Dynamic shadows: colors automatically adjust with current color role */
+  --effect-shadow-soft: 0px 4px 24.3px 0px var(--color-shadow-soft);
+  --effect-shadow-medium: 0px 4px 42.4px 0px var(--color-shadow-medium);
+  --effect-shadow-hard: 0px 4px 41.9px 0px var(--color-shadow-hard);
+}
+
+/* ==========================================================================
+   5. Typography Styles
+   ========================================================================== */
+:root {
+  /* Display large */
+  --typography-display-large-font-family: 'Charis SIL', serif;
+  --typography-display-large-font-weight: 400;
+  --typography-display-large-font-style: normal;
+  --typography-display-large-font-size: 54px;
+  --typography-display-large-line-height: 1.2;
+  --typography-display-large-letter-spacing: -0.02em;
+
+  /* Display medium */
+  --typography-display-medium-font-family: 'Charis SIL', serif;
+  --typography-display-medium-font-weight: 400;
+  --typography-display-medium-font-style: normal;
+  --typography-display-medium-font-size: 42px;
+  --typography-display-medium-line-height: 1.2;
+  --typography-display-medium-letter-spacing: -0.02em;
+
+  /* Display small */
+  --typography-display-small-font-family: 'Charis SIL', serif;
+  --typography-display-small-font-weight: 400;
+  --typography-display-small-font-style: normal;
+  --typography-display-small-font-size: 36px;
+  --typography-display-small-line-height: 1.2;
+  --typography-display-small-letter-spacing: -0.02em;
+
+  /* Headline large */
+  --typography-headline-large-font-family: 'Charis SIL', serif;
+  --typography-headline-large-font-weight: 400;
+  --typography-headline-large-font-style: normal;
+  --typography-headline-large-font-size: 32px;
+  --typography-headline-large-line-height: 1.2;
+  --typography-headline-large-letter-spacing: -0.02em;
+
+  /* Headline medium */
+  --typography-headline-medium-font-family: 'Charis SIL', serif;
+  --typography-headline-medium-font-weight: 400;
+  --typography-headline-medium-font-style: normal;
+  --typography-headline-medium-font-size: 28px;
+  --typography-headline-medium-line-height: 1.2;
+  --typography-headline-medium-letter-spacing: -0.02em;
+
+  /* Headline small */
+  --typography-headline-small-font-family: 'Charis SIL', serif;
+  --typography-headline-small-font-weight: 400;
+  --typography-headline-small-font-style: normal;
+  --typography-headline-small-font-size: 24px;
+  --typography-headline-small-line-height: 1.2;
+  --typography-headline-small-letter-spacing: -0.02em;
+
+  /* Title large */
+  --typography-title-large-font-family: 'Inter', sans-serif;
+  --typography-title-large-font-weight: 400;
+  --typography-title-large-font-style: normal;
+  --typography-title-large-font-size: 24px;
+  --typography-title-large-line-height: 1.4;
+  --typography-title-large-letter-spacing: -0.02em;
+
+  /* Title medium */
+  --typography-title-medium-font-family: 'Inter', sans-serif;
+  --typography-title-medium-font-weight: 400;
+  --typography-title-medium-font-style: normal;
+  --typography-title-medium-font-size: 18px;
+  --typography-title-medium-line-height: 1.4;
+  --typography-title-medium-letter-spacing: -0.02em;
+
+  /* Title small */
+  --typography-title-small-font-family: 'Inter', sans-serif;
+  --typography-title-small-font-weight: 400;
+  --typography-title-small-font-style: normal;
+  --typography-title-small-font-size: 16px;
+  --typography-title-small-line-height: 1.4;
+  --typography-title-small-letter-spacing: -0.02em;
+
+  /* Body large */
+  --typography-body-large-font-family: 'Inter', sans-serif;
+  --typography-body-large-font-weight: 400;
+  --typography-body-large-font-style: normal;
+  --typography-body-large-font-size: 16px;
+  --typography-body-large-line-height: 1.4;
+  --typography-body-large-letter-spacing: -0.02em;
+
+  /* Body medium */
+  --typography-body-medium-font-family: 'Inter', sans-serif;
+  --typography-body-medium-font-weight: 400;
+  --typography-body-medium-font-style: normal;
+  --typography-body-medium-font-size: 14px;
+  --typography-body-medium-line-height: 1.4;
+  --typography-body-medium-letter-spacing: 0;
+
+  /* Body small */
+  --typography-body-small-font-family: 'Inter', sans-serif;
+  --typography-body-small-font-weight: 400;
+  --typography-body-small-font-style: normal;
+  --typography-body-small-font-size: 12px;
+  --typography-body-small-line-height: 1.4;
+  --typography-body-small-letter-spacing: 0;
+
+  /* Label large */
+  --typography-label-large-font-family: 'Inter', sans-serif;
+  --typography-label-large-font-weight: 400;
+  --typography-label-large-font-style: normal;
+  --typography-label-large-font-size: 14px;
+  --typography-label-large-line-height: 1.4;
+  --typography-label-large-letter-spacing: 0;
+
+  /* Label medium */
+  --typography-label-medium-font-family: 'Inter', sans-serif;
+  --typography-label-medium-font-weight: 400;
+  --typography-label-medium-font-style: normal;
+  --typography-label-medium-font-size: 12px;
+  --typography-label-medium-line-height: 1.4;
+  --typography-label-medium-letter-spacing: 0;
+
+  /* Label small */
+  --typography-label-small-font-family: 'Inter', sans-serif;
+  --typography-label-small-font-weight: 400;
+  --typography-label-small-font-style: normal;
+  --typography-label-small-font-size: 10px;
+  --typography-label-small-line-height: 1.4;
+  --typography-label-small-letter-spacing: 0;
+
+}
+
+/* Typography Utility Classes */
+.type-display-large {
+  font-family: var(--typography-display-large-font-family);
+  font-weight: var(--typography-display-large-font-weight);
+  font-style: var(--typography-display-large-font-style);
+  font-size: var(--typography-display-large-font-size);
+  line-height: var(--typography-display-large-line-height);
+  letter-spacing: var(--typography-display-large-letter-spacing);
+}
+
+.type-display-medium {
+  font-family: var(--typography-display-medium-font-family);
+  font-weight: var(--typography-display-medium-font-weight);
+  font-style: var(--typography-display-medium-font-style);
+  font-size: var(--typography-display-medium-font-size);
+  line-height: var(--typography-display-medium-line-height);
+  letter-spacing: var(--typography-display-medium-letter-spacing);
+}
+
+.type-display-small {
+  font-family: var(--typography-display-small-font-family);
+  font-weight: var(--typography-display-small-font-weight);
+  font-style: var(--typography-display-small-font-style);
+  font-size: var(--typography-display-small-font-size);
+  line-height: var(--typography-display-small-line-height);
+  letter-spacing: var(--typography-display-small-letter-spacing);
+}
+
+.type-headline-large {
+  font-family: var(--typography-headline-large-font-family);
+  font-weight: var(--typography-headline-large-font-weight);
+  font-style: var(--typography-headline-large-font-style);
+  font-size: var(--typography-headline-large-font-size);
+  line-height: var(--typography-headline-large-line-height);
+  letter-spacing: var(--typography-headline-large-letter-spacing);
+}
+
+.type-headline-medium {
+  font-family: var(--typography-headline-medium-font-family);
+  font-weight: var(--typography-headline-medium-font-weight);
+  font-style: var(--typography-headline-medium-font-style);
+  font-size: var(--typography-headline-medium-font-size);
+  line-height: var(--typography-headline-medium-line-height);
+  letter-spacing: var(--typography-headline-medium-letter-spacing);
+}
+
+.type-headline-small {
+  font-family: var(--typography-headline-small-font-family);
+  font-weight: var(--typography-headline-small-font-weight);
+  font-style: var(--typography-headline-small-font-style);
+  font-size: var(--typography-headline-small-font-size);
+  line-height: var(--typography-headline-small-line-height);
+  letter-spacing: var(--typography-headline-small-letter-spacing);
+}
+
+.type-title-large {
+  font-family: var(--typography-title-large-font-family);
+  font-weight: var(--typography-title-large-font-weight);
+  font-style: var(--typography-title-large-font-style);
+  font-size: var(--typography-title-large-font-size);
+  line-height: var(--typography-title-large-line-height);
+  letter-spacing: var(--typography-title-large-letter-spacing);
+}
+
+.type-title-medium {
+  font-family: var(--typography-title-medium-font-family);
+  font-weight: var(--typography-title-medium-font-weight);
+  font-style: var(--typography-title-medium-font-style);
+  font-size: var(--typography-title-medium-font-size);
+  line-height: var(--typography-title-medium-line-height);
+  letter-spacing: var(--typography-title-medium-letter-spacing);
+}
+
+.type-title-small {
+  font-family: var(--typography-title-small-font-family);
+  font-weight: var(--typography-title-small-font-weight);
+  font-style: var(--typography-title-small-font-style);
+  font-size: var(--typography-title-small-font-size);
+  line-height: var(--typography-title-small-line-height);
+  letter-spacing: var(--typography-title-small-letter-spacing);
+}
+
+.type-body-large {
+  font-family: var(--typography-body-large-font-family);
+  font-weight: var(--typography-body-large-font-weight);
+  font-style: var(--typography-body-large-font-style);
+  font-size: var(--typography-body-large-font-size);
+  line-height: var(--typography-body-large-line-height);
+  letter-spacing: var(--typography-body-large-letter-spacing);
+}
+
+.type-body-medium {
+  font-family: var(--typography-body-medium-font-family);
+  font-weight: var(--typography-body-medium-font-weight);
+  font-style: var(--typography-body-medium-font-style);
+  font-size: var(--typography-body-medium-font-size);
+  line-height: var(--typography-body-medium-line-height);
+  letter-spacing: var(--typography-body-medium-letter-spacing);
+}
+
+.type-body-small {
+  font-family: var(--typography-body-small-font-family);
+  font-weight: var(--typography-body-small-font-weight);
+  font-style: var(--typography-body-small-font-style);
+  font-size: var(--typography-body-small-font-size);
+  line-height: var(--typography-body-small-line-height);
+  letter-spacing: var(--typography-body-small-letter-spacing);
+}
+
+.type-label-large {
+  font-family: var(--typography-label-large-font-family);
+  font-weight: var(--typography-label-large-font-weight);
+  font-style: var(--typography-label-large-font-style);
+  font-size: var(--typography-label-large-font-size);
+  line-height: var(--typography-label-large-line-height);
+  letter-spacing: var(--typography-label-large-letter-spacing);
+}
+
+.type-label-medium {
+  font-family: var(--typography-label-medium-font-family);
+  font-weight: var(--typography-label-medium-font-weight);
+  font-style: var(--typography-label-medium-font-style);
+  font-size: var(--typography-label-medium-font-size);
+  line-height: var(--typography-label-medium-line-height);
+  letter-spacing: var(--typography-label-medium-letter-spacing);
+}
+
+.type-label-small {
+  font-family: var(--typography-label-small-font-family);
+  font-weight: var(--typography-label-small-font-weight);
+  font-style: var(--typography-label-small-font-style);
+  font-size: var(--typography-label-small-font-size);
+  line-height: var(--typography-label-small-line-height);
+  letter-spacing: var(--typography-label-small-letter-spacing);
+}
+
